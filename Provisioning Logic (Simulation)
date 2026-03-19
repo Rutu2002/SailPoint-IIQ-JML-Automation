@@ -1,0 +1,20 @@
+import sailpoint.object.ProvisioningPlan;
+import sailpoint.object.ProvisioningPlan.AccountRequest;
+
+ProvisioningPlan plan = new ProvisioningPlan();
+
+// Create account request
+AccountRequest accountRequest = new AccountRequest();
+accountRequest.setApplication("Active Directory");
+accountRequest.setOperation(AccountRequest.Operation.Create);
+
+// Set attributes
+accountRequest.add("username", identity.getName());
+accountRequest.add("email", identity.getEmail());
+
+// Add to plan
+plan.add(accountRequest);
+
+log.info("Provisioning plan created for user: " + identity.getName());
+
+return plan;
