@@ -1,0 +1,16 @@
+import sailpoint.object.ProvisioningPlan;
+import sailpoint.object.ProvisioningPlan.AccountRequest;
+
+ProvisioningPlan plan = new ProvisioningPlan();
+
+// Disable account
+AccountRequest accountRequest = new AccountRequest();
+accountRequest.setApplication("Active Directory");
+accountRequest.setOperation(AccountRequest.Operation.Disable);
+
+// Add to plan
+plan.add(accountRequest);
+
+log.info("Deprovisioning user: " + identity.getName());
+
+return plan;
