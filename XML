@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow name="JML_Workflow" type="IdentityLifecycle">
+
+    <!-- Step 1: Create Identity -->
+    <Step name="Create Identity">
+        <Description>Initialize new user identity</Description>
+        <Action>createIdentity</Action>
+    </Step>
+
+    <!-- Step 2: Assign Role -->
+    <Step name="Assign Role">
+        <Description>Assign role based on department</Description>
+        <Action>call:RoleAssignmentRule</Action>
+    </Step>
+
+    <!-- Step 3: Provision Account -->
+    <Step name="Provision Account">
+        <Description>Provision account to Active Directory</Description>
+        <Action>provisionADAccount</Action>
+    </Step>
+
+    <!-- Step 4: Disable Account (Leaver) -->
+    <Step name="Disable Account">
+        <Description>Disable user access during exit</Description>
+        <Action>deprovisionAccount</Action>
+    </Step>
+
+</Workflow>
