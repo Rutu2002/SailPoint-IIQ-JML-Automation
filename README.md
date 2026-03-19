@@ -1,4 +1,3 @@
-# SailPoint-IIQ-JML-Automation
 # SailPoint IIQ - Identity Lifecycle Automation (JML)
 
 ## Overview
