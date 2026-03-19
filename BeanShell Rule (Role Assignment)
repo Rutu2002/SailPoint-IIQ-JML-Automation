@@ -1,0 +1,28 @@
+import sailpoint.object.Identity;
+
+// Get identity object
+Identity identity = context.getObjectByName(Identity.class, identityName);
+
+// Fetch department
+String department = identity.getAttribute("department");
+
+String assignedRole = "DEFAULT_ROLE";
+
+// Role assignment logic
+if (department != null) {
+
+    if (department.equalsIgnoreCase("IT")) {
+        assignedRole = "IT_ROLE";
+    } 
+    else if (department.equalsIgnoreCase("HR")) {
+        assignedRole = "HR_ROLE";
+    } 
+    else if (department.equalsIgnoreCase("Finance")) {
+        assignedRole = "FINANCE_ROLE";
+    }
+}
+
+// Log output (for debugging)
+log.info("Assigned Role: " + assignedRole);
+
+return assignedRole;
