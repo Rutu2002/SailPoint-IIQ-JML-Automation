@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Rutuja",
+    "department": "IT",
+    "email": "rutuja@test.com"
+  },
+  {
+    "name": "Amit",
+    "department": "HR",
+    "email": "amit@test.com"
+  }
+]
